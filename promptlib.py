@@ -272,7 +272,7 @@ html = """
         
         <li><strong>Assign a Role to the AI:</strong> Position the AI as a specific expert or persona to improve the quality and relevance of the output. For example, start your prompt with, “You are a digital marketing strategist…” or “Act as a product description writer for a company…” This frames the AI’s responses to reflect the style, knowledge, and perspective of that role.</li><br>
         
-        <li><strong>Give Feedback and Iterate:</strong> Consider the first output a draft and refine it through feedback. Request revisions by specifying what to change — such as making it more concise, improving clarity, or shifting the tone. Iterative prompting helps tailor the result to your exact needs and enhances the quality of the final deliverable.</li><br>
+        <li><strong>Give Feedback and Iterate:</strong> Consider the first output a draft and refine it through feedback. Request revisions by specifying what to change, such as making it more concise, improving clarity, or shifting the tone. Iterative prompting helps tailor the result to your exact needs and enhances the quality of the final deliverable.</li><br>
     </ul>
     {% endif %}
 </div>
