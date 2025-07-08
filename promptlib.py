@@ -236,8 +236,6 @@ html = """
         <li><strong>Guide the Tone:</strong> State whether it should sound formal, casual, friendly, persuasive, playful, confident, or urgent.</li>
         <li><strong>Give Feedback and Iterate:</strong> Review and refine the results. Ask for improvements like “Make this more conversational” or “Try another version with a stronger hook.”</li>
     </ul>
-    <p>Example:</p>
-    <code>“Write a 3-sentence summary of this article in a humorous tone.”</code>
     {% endif %}
 </div>
 
