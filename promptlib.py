@@ -87,7 +87,7 @@ prompt_library = {
         "Rank my last [number] emails by importance based on sender, subject, and content.",
         "Summarize all email mentions of [project/campaign name] from the past [number] days into a bullet-point update.",
         "Find any follow-up tasks or deadlines mentioned in emails this week and list them with corresponding due dates.",
-        "Write a thank-you email to [name] baed on this thread, acknowledging their input on [topic]."
+        "Write a thank-you email to [name] based on this thread, acknowledging their input on [topic]."
     ]
 }
 
