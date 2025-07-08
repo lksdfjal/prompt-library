@@ -12,17 +12,82 @@ app = Flask(__name__)
 
 # Default prompts
 prompt_library = {
-    "Writing": [
-        "Write a blog post about the future of AI.",
-        "Write a professional email to a member on the marketing team."
-    ],
-    "Generation": [
-        "Generate an image of xyz.",
-        "Generate ideas on how to maximize reach for social media posts."
-    ],
-    "Video": [
-        "Script a 30-second product demo video for a new product.",
-        "Create a narration for a 2-minute animated video explaing a new product."
+    "Chat GPT": [
+        "List [number] blog post ideas about [topic] that incldue [key themes or keywords].",
+        "Outline a long bloc post (1500+ words) on [topic] targeted at [audience].",
+        "Write a blog introduction paragraph for a post about [product or topic] in a [specific tone] tone.",
+        "Summarize this [article or blog] into a breif paragraph.",
+        "Write a how-to blog on resolving [problem] featuring the [product].",
+        "Give [number] catchy blog titles about [topic] that would do well on the website.",
+        "Generate a description using [number] characters for this blog. [insert blog link]",
+        "Turn this webinar topic into [number] blog post titles.",
+        "Write a product comparison post outline for [product] vs [product].",
+        "Create a [number]-day social media content plan for [product] on [platforms].",
+        "Write [number] instagram captions about [prodcut]",
+        "Suggest LinkedIn content ideas that would grab more attention of [audience] using [product].",
+        "What tredning hashtags should we use for a post about [topic] on [platform]?",
+        "Write a LinkedIn post poromoting our laste blog post [insert blog link].",
+        "Write a [duration]-second script for an ad about [product and description].",
+        "List [number] promotion ideas for our [event] targeting [audience].",
+        "Suggest variations of our ad headline to make it more click-worthy: '[Insert headline]'",
+        "Generate a full-funnel marketing campaign plan for [product], including awareness, consideration, and conversion stages.",
+        "Write re-targeting ad copy for users who viewed [product] but chose another solution.",
+        "List ideas for ad creative that visually communicates [key product benefit].",
+        "Write [number] subject lines for a welcom email sequence for [product].",
+        "Draft the body of a promotional email for [product] that emphasizes [benefit].",
+        "Structure a [number]-email re-engagement sequence for dormant users of [product].",
+        "Write a launch announcement email for [product] aimed at [audience] that includes [key words].",
+        "You're an email expert. Write a copy for a weekly newsletter about [specific topic].",
+        "Write an A/B test vaariation of this subject line: [subject line]. Suggest why it might perform better.",
+        "List [number] ways to segment the email list for [product category].",
+        "Create a follow-up email for [event] attendees to try [product].",
+        "What are the top [number] KPIs for a [type] campaign. Explain how to track them.",
+        "Write a summary of marketing performance if the click-through rate increased by [number]%.",
+        "Explain how to use certain parameters to track campaign performance in Google Analytics.",
+        "List ways to improve ROI for underperforming campagins in [channel].",
+        "What insights can be gained from comparing Q1 and Q2 ad spends?"
+    ],    
+    "Copilot": [
+        "Summarize this marketing strategy document [attach file] into [number] key priorities.",
+        "Write an executive summary of the Q[quarter number] reort [attach file] for senior leadership.",
+        "Extract KPIs from this report [attach Excel or Word file] and highlight areas of concern.",
+        "List major takeaways from this competitive analysis [attach file] in [number] bullet points.",
+        "Convert this internal roadmap [attach file] into a presentation outline.",
+        "Summarize this brainstorming doc [attach file] into [number] clear action items.",
+        "Write a [length] paper explaining the pain points of this [campaign name] plan. [attach file]",
+        "Draft a memo summarizing this meeting transcript [attach file] and include next steps.",
+        "Create a bulleted summary of our top [number] campaigns from this report [attach file].",
+        "Outline the core messaging strategy form this document [attach brand guide].",
+        "Analyze performance form this Excel file [attach file] and summarize the impressions and conversions by channel.",
+        "Compare performance form Q[quarter number] to Q[quarter number] using this file. [Attach file]",
+        "Create visual charts showing growth in leads over the past [number] months. [attach Excel file]",
+        "Summarize customer behavior data from this file [attach Excel file] and make 3 actionable suggestions.",
+        "Highlight underperforming ads from this report [attach file] with possible causes.",
+        "Create a slide summarizing the key takeaways from this analytics dashboard export. [insert dashboard export]",
+        "Extract open and click rates from this email report and compart to benchmarks. [attach file]",
+        "Summarize pain points and needs from these interview notes [attach file.",
+        "Generate customer quotes from this feedback form [attach form] to use in social media posts.",
+        "Extract demographic data from this survey [attach file] and format as a table.",
+        "Summarize how customer preferences have changed over time using this data [attach Excel file].",
+        "Draft a marketing update email to the company using this report [attach file].",
+        "Convert this internal marketing deck [attach PowerPoint] into client-facing language.",
+        "Turn this report [attach file] into a press release draft announcing our results.",
+        "Create a team briefing document using the top points from this presentation [attach file].",
+        "Create a summary email to partners based on this campaign performance deck. [attach file]",
+        "Turn this big blog post [attach file] into an email newsletter and [number] social media posts.",
+        "Summarize this paper into a [number] page overview for prospects.",
+        "Write [number] ad headlines and descriptions on this product spec sheet [attach file].",
+        "Repurpose this survey report [attach file] into a refreshed strategy for [new audience].",
+        "Rewrite this email template [attach file] to match the company's brand voice aimed towards [purpose and tone]."
+        "Summarize the last [number] unread emails in my inbox. Highligh anything urgent or time-sensitive.",
+        "Group eamils from [person/team] this week and summarize key topics that are discussed.",
+        "Identify which emails in my inbox from the past [number] days are action items or require responses.",
+        "Draft responses to these [number] emails marked unread. Use a [specific tone] tone.",
+        "Summarize this email thread and suggest a response that acknowledges all key points.",
+        "Rank my last [number] emails by imporance based on sender, subject, and content.",
+        "Summarize all email mentions of [project/campaign name] from the past [number] days into a bullet-point update.",
+        "Find any follow-up tasks or deadlines mentioned in emails this week and list them with corresponding due dates.",
+        "Write a thank-you email to [name] baed on this thread, acknowledging their input on [topic]."
     ]
 }
 
@@ -168,7 +233,7 @@ html = """
         <li><strong>Give Context:</strong> Include background or examples if needed.</li>
         <li><strong>Use Constraints:</strong> Limit output length, format, or style.</li>
         <li><strong>Guide the Tone:</strong> Want formal, friendly, concise, humorous?</li>
-        <li><strong>Iterate:</strong> Try and refine based on results.</li>
+        <li><strong>Give feedback:</strong> Try and refine based on results.</li>
     </ul>
     <p>Example:</p>
     <code>“Write a 3-sentence summary of this article in a humorous tone.”</code>

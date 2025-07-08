@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Prompt Library</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: white;
+  }
+  header {
+    background-color: #4F4F4F; /* Grey */
+    padding: 20px;
+    text-align: center;
+  }
+  header h1 {
+    color: #ccdd37; /* Green */
+    margin: 0;
+    font-size: 36px;
+  }
+  header img {
+    height: 50px;
+    vertical-align: middle;
+    margin-top: 10px;
+  }
+  .container {
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+  }
+  .tabs {
+    margin-bottom: 10px;
+  }
+  .tab-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #ccc;
+    color: #444;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+  }
+  .tab-btn.active {
+    background-color: #ccdd37;
+    color: white;
+  }
+  #instruction {
+    color: #4F4F4F;
+    font-size: 14px;
+    margin: 10px 0 20px 0;
+  }
+  #search-box {
+    margin-bottom: 20px;
+  }
+  #search-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  #search-button {
+    padding: 10px 20px;
+    background-color: #ccdd37;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .category {
+    margin-top: 30px;
+  }
+  .category h2 {
+    color: #001F3F;
+  }
+  .prompt {
+    background: #f0f0f0;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-left: 4px solid #ccdd37;
+    border-radius: 4px;
+  }
+  .highlight {
+    background-color: #ccdd37;
+    font-weight: bold;
+  }
+  #no-results {
+    color: #444;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>AI Prompt Library</h1>
+  <img src="matthews.png" alt="Company Logo" />
+</header>
+
+<div class="container">
+  <div class="tabs">
+    <button id="tab-search" class="tab-btn active">Prompt Finder</button>
+    <button id="tab-browse" class="tab-btn">Search by Category</button>
+  </div>
+
+  <div id="instruction">Type one or more keywords to search for relevant prompts.</div>
+
+  <div id="search-box">
+    <input id="search-input" type="text" placeholder="Search prompts..." />
+    <button id="search-button">Search</button>
+  </div>
+
+  <div id="results"></div>
+</div>
+
+<script>
+  const promptLibrary = {
+    "Writing": [
+      "Write a blog post about the future of AI.",
+      "Write a professional email to a member on the marketing team."
+    ],
+    "Generation": [
+      "Generate an image of xyz.",
+      "Generate a 5-second video that shows the product in use."
+    ],
+    "Video": [
+      "Script a 30-second product demo video for a new product.",
+      "Create a narration for a 2-minute animated video explaining a new product."
+    ]
+  };
+
+  const tabSearch = document.getElementById('tab-search');
+  const tabBrowse = document.getElementById('tab-browse');
+  const instruction = document.getElementById('instruction');
+  const searchBox = document.getElementById('search-box');
+  const results = document.getElementById('results');
+  const searchInput = document.getElementById('search-input');
+  const searchButton = document.getElementById('search-button');
+
+  function clearResults() {
+    results.innerHTML = '';
+  }
+
+  function highlightKeywords(text, keywords) {
+    let escapedText = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    keywords.forEach(keyword => {
+      const regex = new RegExp(`(${keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+      escapedText = escapedText.replace(regex, `<span class="highlight">$1</span>`);
+    });
+    return escapedText;
+  }
+
+  function searchPrompts() {
+    const input = searchInput.value.trim().toLowerCase();
+    if (!input) {
+      results.innerHTML = '<p id="no-results">Please enter keyword(s) to search.</p>';
+      return;
+    }
+    const keywords = input.split(/\s+/);
+    const foundPrompts = {};
+
+    for (const [category, prompts] of Object.entries(promptLibrary)) {
+      const matches = prompts.filter(prompt => 
+        keywords.every(kw => prompt.toLowerCase().includes(kw))
+      );
+      if (matches.length) {
+        foundPrompts[category] = matches;
+      }
+    }
+
+    clearResults();
+
+    if (Object.keys(foundPrompts).length === 0) {
+      results.innerHTML = `<p id="no-results">No prompts found for '${input}'.</p>`;
+      return;
+    }
+
+    // Show all matched prompts without categories (flat list)
+    for (const prompts of Object.values(foundPrompts)) {
+      for (const prompt of prompts) {
+        const highlighted = highlightKeywords(prompt, keywords);
+        const div = document.createElement('div');
+        div.className = 'prompt';
+        div.innerHTML = highlighted;
+        results.appendChild(div);
+      }
+    }
+  }
+
+  function browseByCategory() {
+    clearResults();
+    for (const [category, prompts] of Object.entries(promptLibrary)) {
+      const catDiv = document.createElement('div');
+      catDiv.className = 'category';
+      const h2 = document.createElement('h2');
+      h2.textContent = category;
+      catDiv.appendChild(h2);
+      prompts.forEach(prompt => {
+        const p = document.createElement('div');
+        p.className = 'prompt';
+        p.textContent = prompt;
+        catDiv.appendChild(p);
+      });
+      results.appendChild(catDiv);
+    }
+  }
+
+  function setActiveTab(tab) {
+    if (tab === 'search') {
+      tabSearch.classList.add('active');
+      tabBrowse.classList.remove('active');
+      instruction.style.display = 'block';
+      searchBox.style.display = 'block';
+      results.innerHTML = '';
+      searchInput.value = '';
+    } else {
+      tabSearch.classList.remove('active');
+      tabBrowse.classList.add('active');
+      instruction.style.display = 'none';
+      searchBox.style.display = 'none';
+      browseByCategory();
+    }
+  }
+
+  tabSearch.addEventListener('click', () => setActiveTab('search'));
+  tabBrowse.addEventListener('click', () => setActiveTab('browse'));
+  searchButton.addEventListener('click', searchPrompts);
+  searchInput.addEventListener('keyup', e => {
+    if (e.key === 'Enter') {
+      searchPrompts();
+    }
+  });
+
+  // Initialize with search tab active
+  setActiveTab('search');
+</script>
+
+</body>
+</html>
