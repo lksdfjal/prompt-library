@@ -120,7 +120,7 @@ prompt_library = {
         "Review this marketing strategy [insert] and identify any gaps or assumptions.",
         "Identify conflicting and unclear language in this cmpaign [insert] and suggest alternatives.",
         "Summarize this email [insert] into a more concise version without losing the message.",
-        "Turn this dense technical copy [i"
+        "Turn this dense technical copy [insert] into a version that would resonate with non-experts."
     ]
 }
 
