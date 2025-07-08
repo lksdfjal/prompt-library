@@ -88,6 +88,39 @@ prompt_library = {
         "Summarize all email mentions of [project/campaign name] from the past [number] days into a bullet-point update.",
         "Find any follow-up tasks or deadlines mentioned in emails this week and list them with corresponding due dates.",
         "Write a thank-you email to [name] based on this thread, acknowledging their input on [topic]."
+    ],
+    "Jasper": [
+        "Write a product description for [product] that highlights its top 3 benefits to [audience].",
+        "Create a blog introduction for a post about [topic] using a conversational tone.",
+        "Generate [number] potential blog titles for a post targeting [industry] professionals about [pain point or trend].",
+        "Summarize this blog post [copy link] ito a one-paragraph email teaser.",
+        "Turn this list of bullet points [insert] into a polished, engaging paragraph.",
+        "Create an FAQ section for the website about [product] using friendly, helpful language.",
+        "Write a launch announcement for [product] in a tone that is confidnet but doesn't sound too much like a sales pitch.",
+        "Generate three ad copy variations of this promotion [insert] using urgency, curiosity, and emotional appeal.",
+        "Turn this technical paragraph [insert] into simpler language a first-time customer would understand."
+        "Write a thank-you message to customers after a successful campaign, mentioning [result/impact].",
+        "Turn these campaign insights [insert] into a concise marketing recap.",
+        "Create messaging that compares the product to a competitor, focusing on its unique advantage.",
+        "Write a short campaign blurb that can be reused across emails, ads, and socials for [event/product].",
+        "Summarize this blog into a [number]-slide carousel format. Include title suggestions and bullet points for each slide.",
+        "Draft a post announcing [event, product, report] in a way that encourages engagement and sharing.",
+    ],
+    "Claude": [
+        "Brainstorm 10 unique marketing angles for [product] that appeal to [audience].",
+        "Compare the pros and cons of a product-led vs sales-led launch strategy for [product].",
+        "Analyze the messaging on the website homepage and suggest how it could be clearer or more compelling.",
+        "Outline a launch strategy for a digital prodcut targeting [niche audience] with a low marketing budget.",
+        "What are some potential challenges we could face in launching [campaign type] and how can each be planned for?",
+        "Write a detailed outline about [industry trend] for a B2B audience.",
+        "Expand this outline [insert] into a full-length blog that explains [technical concept] in simple terms for [audience].",
+        "Create a guide that walks through how [persona] can use [product] to solve [specific need].",
+        "Look at the current value proposition: [insert]. Suggest improvements based on clarity, differentiation, and tone.",
+        "Evaluate brand messaging: [insert] for consistency with overall voice and audience fit.",
+        "Review this marketing strategy [insert] and identify any gaps or assumptions.",
+        "Identify conflicting and unclear language in this cmpaign [insert] and suggest alternatives.",
+        "Summarize this email [insert] into a more concise version without losing the message.",
+        "Turn this dense technical copy [i"
     ]
 }
 
