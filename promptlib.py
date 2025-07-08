@@ -229,11 +229,12 @@ html = """
     {% elif mode == 'create' %}
     <h2>How to Create a Prompt</h2>
     <ul style="line-height: 1.8;">
-        <li><strong>Be Specific:</strong> Tell the model exactly what you want it to do.</li>
-        <li><strong>Give Context:</strong> Include background or examples if needed.</li>
-        <li><strong>Use Constraints:</strong> Limit output length, format, or style.</li>
-        <li><strong>Guide the Tone:</strong> Want formal, friendly, concise, humorous?</li>
-        <li><strong>Give feedback:</strong> Try and refine based on results.</li>
+        <li><strong>Know What You Want:</strong> Clearly define the task and outcome you’re aiming for.</li>
+        <li><strong>Be Specific and Detailed:</strong> Tell the model exactly what to do, and include product names, features, goals, and platforms where applicable.</li>
+        <li><strong>Give Context:</strong> Add background info, examples, or brand voice if needed. Mention your audience, past campaigns, or tone of voice.</li>
+        <li><strong>Use Constraints:</strong> Set limits on output length (e.g., “Keep it under 100 words”), format (e.g., bullets, paragraph), or structure (e.g., “Use rhyme”).</li>
+        <li><strong>Guide the Tone:</strong> State whether it should sound formal, casual, friendly, persuasive, playful, confident, or urgent.</li>
+        <li><strong>Give Feedback and Iterate:</strong> Review and refine the results. Ask for improvements like “Make this more conversational” or “Try another version with a stronger hook.”</li>
     </ul>
     <p>Example:</p>
     <code>“Write a 3-sentence summary of this article in a humorous tone.”</code>
