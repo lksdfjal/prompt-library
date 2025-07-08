@@ -260,26 +260,19 @@ html = """
     {% elif mode == 'create' %}
     <h2>How to Create a Prompt</h2>
     <ul>
-        <li><strong>Know What You Want:</strong> Begin with a clear understanding of the desired output.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;Rather than providing vague instructions, define the task, the format, and the intended audience. For example, request a “three-sentence LinkedIn post promoting our new product to B2B decision-makers” instead of simply asking for “social media help.” Clarity leads to more accurate and relevant results.</li>
-
-        <li><strong>Be Specific and Detailed:</strong> Provide precise details to guide the model’s output.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;This includes naming the product, identifying the target audience, clarifying the objective, and specifying the platform. Detailed prompts enable the AI to generate more relevant, personalized, and high-quality content.</li>
-
-        <li><strong>Give Context:</strong> Supplying context improves the AI’s ability to align with your goals.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;Mention past campaigns, brand voice, tone preferences, or relevant background information. This helps the model generate responses that are consistent with your existing messaging and aligned with your brand identity.</li>
-
-        <li><strong>Use Constraints:</strong> Setting boundaries ensures that the output meets format, tone, and length expectations.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;For instance, you might specify a 30-character headline, a paragraph under 100 words, or ask for content in bullet format. These constraints help focus the AI and keep responses usable within your intended channels.</li>
-
-        <li><strong>Guide the Tone:</strong> Tone plays a critical role in how your message is perceived.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;Indicate whether the output should sound formal, conversational, persuasive, or humorous. Providing tone guidance helps ensure the content aligns with your brand and resonates with your intended audience.</li>
-
-        <li><strong>Assign a Role to the AI:</strong> Position the AI as a specific expert or persona to improve the quality and relevance of the output.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;For example, start your prompt with, “You are a digital marketing strategist…” or “Act as a product copywriter for a SaaS company…” This frames the AI’s responses to reflect the style, knowledge, and perspective of that role.</li>
-
-        <li><strong>Give Feedback and Iterate:</strong> Consider the first output a draft and refine it through feedback.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;Request revisions by specifying what to change — such as making it more concise, improving clarity, or shifting the tone. Iterative prompting helps tailor the result to your exact needs and enhances the quality of the final deliverable.</li>
+        <li><strong>Know What You Want:</strong> Begin with a clear understanding of the desired output. Rather than providing vague instructions, define the task, the format, and the intended audience. For example, request a “three-sentence LinkedIn post promoting our new product to B2B decision-makers” instead of simply asking for “social media help.” Clarity leads to more accurate and relevant results.</li>
+        
+        <li><strong>Be Specific and Detailed:</strong> Provide precise details to guide the model’s output. This includes naming the product, identifying the target audience, clarifying the objective, and specifying the platform. Detailed prompts enable the AI to generate more relevant, personalized, and high-quality content.</li>
+        
+        <li><strong>Give Context:</strong> Supplying context improves the AI’s ability to align with your goals. Mention past campaigns, brand voice, tone preferences, or relevant background information. This helps the model generate responses that are consistent with your existing messaging and aligned with your brand identity.</li>
+        
+        <li><strong>Use Constraints:</strong> Setting boundaries ensures that the output meets format, tone, and length expectations. For instance, you might specify a 30-character headline, a paragraph under 100 words, or ask for content in bullet format. These constraints help focus the AI and keep responses usable within your intended channels.</li>
+        
+        <li><strong>Guide the Tone:</strong> Tone plays a critical role in how your message is perceived. Indicate whether the output should sound formal, conversational, persuasive, or humorous. Providing tone guidance helps ensure the content aligns with your brand and resonates with your intended audience.</li>
+        
+        <li><strong>Assign a Role to the AI:</strong> Position the AI as a specific expert or persona to improve the quality and relevance of the output. For example, start your prompt with, “You are a digital marketing strategist…” or “Act as a product copywriter for a SaaS company…” This frames the AI’s responses to reflect the style, knowledge, and perspective of that role.</li>
+        
+        <li><strong>Give Feedback and Iterate:</strong> Consider the first output a draft and refine it through feedback. Request revisions by specifying what to change — such as making it more concise, improving clarity, or shifting the tone. Iterative prompting helps tailor the result to your exact needs and enhances the quality of the final deliverable.</li>
     </ul>
     {% endif %}
 </div>
