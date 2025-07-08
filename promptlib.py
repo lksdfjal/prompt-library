@@ -1,5 +1,5 @@
 """
-Created on MON Jun 23 09:55:20 2025
+Created on MON Jun 23 0:55:20 2025
 
 @author: LKohl
 """
@@ -10,7 +10,6 @@ import re
 
 app = Flask(__name__)
 
-# Default prompts
 prompt_library = {
     "Chat GPT": [
         "List [number] blog post ideas about [topic] that incldue [key themes or keywords].",
@@ -124,7 +123,6 @@ prompt_library = {
     ]
 }
 
-# Track user-submitted prompts as (category, prompt) tuples
 user_prompts = []
 
 html = """
@@ -261,13 +259,14 @@ html = """
 
     {% elif mode == 'create' %}
     <h2>How to Create a Prompt</h2>
-    <ul style="line-height: 1.8;">
-        <li><strong>Know What You Want:</strong> Clearly define the task and outcome you’re aiming for.</li>
-        <li><strong>Be Specific and Detailed:</strong> Tell the model exactly what to do, and include product names, features, goals, and platforms where applicable.</li>
-        <li><strong>Give Context:</strong> Add background info, examples, or brand voice if needed. Mention your audience, past campaigns, or tone of voice.</li>
-        <li><strong>Use Constraints:</strong> Set limits on output length (e.g., “Keep it under 100 words”), format (e.g., bullets, paragraph), or structure (e.g., “Use rhyme”).</li>
-        <li><strong>Guide the Tone:</strong> State whether it should sound formal, casual, friendly, persuasive, playful, confident, or urgent.</li>
-        <li><strong>Give Feedback and Iterate:</strong> Review and refine the results. Ask for improvements like “Make this more conversational” or “Try another version with a stronger hook.”</li>
+    <ul>
+        <li><strong>Know What You Want:</strong> Begin with a clear understanding of the desired output. Rather than providing vague instructions, define the task, the format, and the intended audience. For example, request a “three-sentence LinkedIn post promoting our new product to B2B decision-makers” instead of simply asking for “social media help.” Clarity leads to more accurate and relevant results.</li>
+        <li><strong>Be Specific and Detailed:</strong> Provide precise details to guide the model’s output. This includes naming the product, identifying the target audience, clarifying the objective, and specifying the platform. Detailed prompts enable the AI to generate more relevant, personalized, and high-quality content.</li>
+        <li><strong>Give Context:</strong> Supplying context improves the AI’s ability to align with your goals. Mention past campaigns, brand voice, tone preferences, or relevant background information. This helps the model generate responses that are consistent with your existing messaging and aligned with your brand identity.</li>
+        <li><strong>Use Constraints:</strong> Setting boundaries ensures that the output meets format, tone, and length expectations. For instance, you might specify a 30-character headline, a paragraph under 100 words, or ask for content in bullet format. These constraints help focus the AI and keep responses usable within your intended channels.</li>
+        <li><strong>Guide the Tone:</strong> Tone plays a critical role in how your message is perceived. Indicate whether the output should sound formal, conversational, persuasive, or humorous. Providing tone guidance helps ensure the content aligns with your brand and resonates with your intended audience.</li>
+        <li><strong>Assign a Role to the AI:</strong> Position the AI as a specific expert or persona to improve the quality and relevance of the output. For example, start your prompt with, “You are a digital marketing strategist…” or “Act as a product copywriter for a SaaS company…” This frames the AI’s responses to reflect the style, knowledge, and perspective of that role.</li>
+        <li><strong>Give Feedback and Iterate:</strong> Consider the first output a draft and refine it through feedback. Request revisions by specifying what to change — such as making it more concise, improving clarity, or shifting the tone. Iterative prompting helps tailor the result to your exact needs and enhances the quality of the final deliverable.</li>
     </ul>
     {% endif %}
 </div>
