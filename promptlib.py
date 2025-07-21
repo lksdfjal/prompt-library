@@ -222,7 +222,15 @@ html = """
     {% elif mode == 'browse' %}
     <h2>All Prompts</h2>
     {% if filtered_prompts %}
-        {% for category, prompts in filtered_prompts.items() %}
+    <div class="prompt" style="background-color: #e7f0c3; font-weight: bold;">
+        You are a [role/expert]. Create a [format: blog, email, etc.]  
+        Target: [audience role and industry]  
+        Goal: [lead gen, awareness, conversion]  
+        Key details: [benefits, differentiators, CTA]  
+        Tone: [professional, confident, concise]  
+        Framework: [optional, like AIDA or PAS]
+    </div>    
+    {% for category, prompts in filtered_prompts.items() %}
             <div class="category"><h2>{{ category }}</h2></div>
             {% for prompt in prompts %}
                 <div class="prompt">
@@ -260,19 +268,17 @@ html = """
     {% elif mode == 'create' %}
     <h2>How to Create a Prompt</h2>
     <ul>
-        <li><strong>Know What You Want:</strong> Begin with a clear understanding of the desired output. Rather than providing vague instructions, define the task, the format, and the intended audience. For example, request a “three-sentence LinkedIn post promoting our new product to B2B decision-makers” instead of simply asking for “social media help.” Clarity leads to more accurate and relevant results.</li><br>
-        
-        <li><strong>Be Specific and Detailed:</strong> Provide precise details to guide the model’s output. This includes naming the product, identifying the target audience, clarifying the objective, and specifying the platform. Detailed prompts enable the AI to generate more relevant, personalized, and high-quality content.</li><br>
-        
-        <li><strong>Give Context:</strong> Supplying context improves the AI’s ability to align with your goals. Mention past campaigns, brand voice, tone preferences, or relevant background information. This helps the model generate responses that are consistent with your existing messaging and aligned with your brand identity.</li><br>
-        
-        <li><strong>Use Constraints:</strong> Setting boundaries ensures that the output meets format, tone, and length expectations. For instance, you might specify a 30-character headline, a paragraph under 100 words, or ask for content in bullet format. These constraints help focus the AI and keep responses usable within your intended channels.</li><br>
-        
-        <li><strong>Guide the Tone:</strong> Tone plays a critical role in how your message is perceived. Indicate whether the output should sound formal, conversational, persuasive, or humorous. Providing tone guidance helps ensure the content aligns with your brand and resonates with your intended audience.</li><br>
-        
-        <li><strong>Assign a Role to the AI:</strong> Position the AI as a specific expert or persona to improve the quality and relevance of the output. For example, start your prompt with, “You are a digital marketing strategist…” or “Act as a product description writer for a company…” This frames the AI’s responses to reflect the style, knowledge, and perspective of that role.</li><br>
-        
-        <li><strong>Give Feedback and Iterate:</strong> Consider the first output a draft and refine it through feedback. Request revisions by specifying what to change, such as making it more concise, improving clarity, or shifting the tone. Iterative prompting helps tailor the result to your exact needs and enhances the quality of the final deliverable.</li><br>
+        <li><strong>Prompt Template:</strong> You are a [role/expert]. Create a [format: blog, email, etc.] Target: [audience role and industry] Goal: [lead gen, awareness, conversion] Key details: [benefits, differentiators, CTA] Tone: [professional, confident, concise] Framework: [optional, like AIDA or PAS]</li><br>
+        <li><strong>Define the goal:</strong> Know the purpose—lead gen, awareness, SEO, etc.</li><br>
+        <li><strong>Clarify the audience:</strong> Include role, industry, pain points, and tone preferences.</li><br>
+        <li><strong>Provide product/offer context:</strong> Include benefits, differentiators, and CTAs.</li><br>
+        <li><strong>Specify format and tone:</strong> E.g., blog post, bullet list, carousel, casual/professional.</li><br>
+        <li><strong>Use role-based prompting:</strong> Assign a persona like “You are a senior B2B copywriter.”</li><br>
+        <li><strong>Tell AI what to avoid:</strong> Help keep it on-brand and concise.</li><br>
+        <li><strong>Use frameworks:</strong> Add AIDA, PAS, StoryBrand, or similar to enhance structure.</li><br>
+        <li><strong>Use the C.R.A.F.T. structure:</strong> Context, Role, Action, Format, Target Audience for detailed, powerful prompts.</li><br>
+        <li><strong>Iterate like a dialogue:</strong> Refine responses just like a real conversation.</li><br>
+        <li><strong>Prompt the prompter:</strong> Ask AI to ask you questions and help refine your initial idea into a detailed prompt.</li><br>
     </ul>
     {% endif %}
 </div>
