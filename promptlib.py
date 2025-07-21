@@ -221,15 +221,7 @@ html = """
 
     {% elif mode == 'browse' %}
     <h2>All Prompts</h2>
-    {% if filtered_prompts %}
-    <div class="prompt" style="background-color: #e7f0c3; font-weight: bold;">
-        You are a [role/expert]. Create a [format: blog, email, etc.]  
-        Target: [audience role and industry]  
-        Goal: [lead gen, awareness, conversion]  
-        Key details: [benefits, differentiators, CTA]  
-        Tone: [professional, confident, concise]  
-        Framework: [optional, like AIDA or PAS]
-    </div>    
+    {% if filtered_prompts %}  
     {% for category, prompts in filtered_prompts.items() %}
             <div class="category"><h2>{{ category }}</h2></div>
             {% for prompt in prompts %}
