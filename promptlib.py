@@ -261,7 +261,7 @@ html = """
     <h2>How to Create a Prompt</h2>
     <ul>
         <li><strong>Prompt Template:</strong> You are a [role/expert]. Create a [format: blog, email, etc.] Target: [audience role and industry] Goal: [lead gen, awareness, conversion] Key details: [benefits, differentiators, CTA] Tone: [professional, confident, concise] Framework: [optional, like AIDA or PAS]</li><br>
-        <li><strong>Define the goal:</strong> Know the purpose—lead gen, awareness, SEO, etc.</li><br>
+        <li><strong>Define the goal:</strong> Know the purpose (lead gen, awareness, SEO, etc.)</li><br>
         <li><strong>Clarify the audience:</strong> Include role, industry, pain points, and tone preferences.</li><br>
         <li><strong>Provide product/offer context:</strong> Include benefits, differentiators, and CTAs.</li><br>
         <li><strong>Specify format and tone:</strong> E.g., blog post, bullet list, carousel, casual/professional.</li><br>
