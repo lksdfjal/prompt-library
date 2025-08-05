@@ -102,7 +102,7 @@ prompt_library = {
         "Create an FAQ section for the website about [product] using friendly, helpful language.",
         "Write a launch announcement for [product] in a tone that is confidnet but doesn't sound too much like a sales pitch.",
         "Generate three ad copy variations of this promotion [insert] using urgency, curiosity, and emotional appeal.",
-        "Turn this technical paragraph [insert] into simpler language a first-time customer would understand."
+        "Turn this technical paragraph [insert] into simpler language a first-time customer would understand.",
         "Write a thank-you message to customers after a successful campaign, mentioning [result/impact].",
         "Turn these campaign insights [insert] into a concise marketing recap.",
         "Create messaging that compares the product to a competitor, focusing on its unique advantages.",
