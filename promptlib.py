@@ -86,7 +86,12 @@ prompt_library = {
         "Rank my last [number] emails by importance based on sender, subject, and content.",
         "Summarize all email mentions of [project/campaign name] from the past [number] days into a bullet-point update.",
         "Find any follow-up tasks or deadlines mentioned in emails this week and list them with corresponding due dates.",
-        "Write a thank-you email to [name] based on this thread, acknowledging their input on [topic]."
+        "Write a thank-you email to [name] based on this thread, acknowledging their input on [topic].",
+        "[Upload monthly report] Write a brief paragraph that analyzes [month, year] in comparison to the surrounding months.",
+        "[Upload monthly report] Compare [month, year] to other months, and give commentary including a percentage breakdown.",
+        "[Upload monthly report] Summarize all the data in the chart into a concise paragraph."
+        "[Upload sample marking image] Turn this image into a simple line image. Be sure to keep the labeling details.",
+        "[Upload sample line drawing image] Turn this line drawing into a realistic style picture. Be sure to keep the labeling details."
     ],
     "Jasper": [
         "Write a product description for [product] that highlights its top 3 benefits to [audience].",
