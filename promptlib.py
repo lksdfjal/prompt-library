@@ -89,7 +89,7 @@ prompt_library = {
         "Write a thank-you email to [name] based on this thread, acknowledging their input on [topic].",
         "[Upload monthly report] Write a brief paragraph that analyzes [month, year] in comparison to the surrounding months.",
         "[Upload monthly report] Compare [month, year] to other months. Give commentary including a percentage breakdown and trends.",
-        "[Upload monthly report] Summarize all the data in the chart into a concise paragraph."
+        "[Upload monthly report] Summarize all the data in the chart into a concise paragraph.",
         "[Upload sample marking image] Turn this image into a simple line image. Be sure to keep the labeling details.",
         "[Upload sample line drawing image] Turn this line drawing into a realistic style picture. Be sure to keep the labeling details."
     ],
