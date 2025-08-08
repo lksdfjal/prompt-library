@@ -276,7 +276,7 @@ html = """
         <li><strong>Use the C.R.A.F.T. structure:</strong> Context, Role, Action, Format, Target Audience for detailed, powerful prompts.</li><br>
         <li><strong>Iterate like a dialogue:</strong> Refine responses just like a real conversation.</li><br>
         <li><strong>Prompt the prompter:</strong> Ask AI to ask you questions and help refine your initial idea into a detailed prompt.</li><br>
-        <li><strong>Additional Context for Marketing Prompts:</strong>
+        <li><strong>Additional Context for blog content:</strong>
             <ul>
                 <li><strong>Tone & Voice:</strong>
                     <ul>
