@@ -276,6 +276,32 @@ html = """
         <li><strong>Use the C.R.A.F.T. structure:</strong> Context, Role, Action, Format, Target Audience for detailed, powerful prompts.</li><br>
         <li><strong>Iterate like a dialogue:</strong> Refine responses just like a real conversation.</li><br>
         <li><strong>Prompt the prompter:</strong> Ask AI to ask you questions and help refine your initial idea into a detailed prompt.</li><br>
+        <li><strong>Additional Context for Marketing Prompts:</strong>
+            <ul>
+                <li><strong>Tone & Voice:</strong>
+                    <ul>
+                        <li>Casual, light but also authoritative and pragmatic</li>
+                        <li>Conversational and not too corporate</li>
+                        <li>Witty and metaphorical</li>
+                        <li>Solution-driven</li>
+                    </ul>
+                    </li>
+                    <li><strong>Audience:</strong>
+                        <ul>
+                        <li>Plant managers or operation leads</li>
+                        <li>Manufacturing/packaging engineers</li>
+                        <li>Process improvement professionals</li>
+                        <li>Supply chain and quality control teams</li>
+                    </ul>
+                </li>
+                <li><strong>Written From:</strong>
+                    <ul>
+                        <li>Engineers, product specialists, service techs</li>
+                        <li>Experienced, helpful, forward-looking, relatable, honest</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
     </ul>
     {% endif %}
 </div>
